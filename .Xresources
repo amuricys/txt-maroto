@@ -1,0 +1,14 @@
+! Xft settings
+!-----------------------
+Xft.antialias:  true
+Xft.autohint:   false
+Xft.dpi:        192
+Xft.hinting:    true
+Xft.hintstyle:  hintfull
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       none
+
+! Xcursor config (check out gnome-look.org)
+!-----------------------
+Xcursor.theme:  Simp1e
+Xcursor.size:   48
