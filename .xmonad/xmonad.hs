@@ -129,8 +129,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     , ((modm                 , xK_b     ), sendMessage ToggleStruts)
+
     -- Lock screen
     , ((modm .|. controlMask , xK_q     ), spawn "betterlockscreen --lock dimblur --display 0")
+
+    -- Show clipboard history
+    , ((modm .|. controlMask , xK_c     ), spawn "copyq toggle")
+
     -- Quit xmonad
     , ((modm .|. shiftMask   , xK_q     ), io (exitWith ExitSuccess))
 
@@ -254,6 +259,7 @@ myLogHook = return ()
 -- Initialize nitrogen (X11 desktop setter) and picom (compositor for transparent windows).
 myStartupHook = do
   spawnOnce "xrdb -merge ~/.Xresources"
+  spawnOnce "copyq &"
   spawnOnce "nitrogen --restore &"
   spawnOnce "picom &"
 

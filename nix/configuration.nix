@@ -52,6 +52,13 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Enable libinput to handle natural scrolling and clickfinger behavior (no software defined areas) on touchpad
+  services.xserver.libinput = {
+    enable = true;
+    touchpad.naturalScrolling = true;
+    touchpad.clickMethod = "clickfinger";
+  };
+
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -115,6 +122,7 @@
     fzf
     ripgrep
     betterlockscreen
+    copyq
   ];
   # Zsh settings (default shell was set above for all users)
   programs.zsh = {
