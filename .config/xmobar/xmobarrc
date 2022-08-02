@@ -1,8 +1,8 @@
 Config { 
 
    -- appearance
-     font =         "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
-   , bgColor =      "black"
+     font =         "xft:Overpass Mono:size=10:bold:antialias=true"
+   , bgColor =      "#282c34"
    , fgColor =      "#646464"
    , position =     Top
    , border =       BottomB
@@ -51,7 +51,7 @@ Config {
                              ] 10
 
         -- cpu activity monitor
-        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"
+        , Run MultiCpu       [ "--template" , "CPU: <total0>%|<total1>%"
                              , "--Low"      , "50"         -- units: %
                              , "--High"     , "85"         -- units: %
                              , "--low"      , "darkgreen"

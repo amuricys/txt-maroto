@@ -9,6 +9,7 @@
     [
        <nixos-hardware/microsoft/surface>
        ./hardware-configuration.nix
+       (fetchTarball "https://github.com/takagiy/nixos-declarative-fish-plugin-mgr/archive/0.0.5.tar.gz")
     ];
 
   # Bootloader.
@@ -95,12 +96,34 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  # Enable bluetooth pairing (needed according to nixos wiki)
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
+  # Enable docker virtualization. Needed for using supervisord I think
   virtualisation.docker.enable = true;
 
+  # Add betterlockscreen as a systemd service so the screen gets locked upon sleep/suspend
+  systemd.services.betterlockscreen = {
+    enable = true;
+    description = "Lock screen when going to sleep/suspend";
+    unitConfig = {
+      Type = "simple";
+      Before = [ "sleep.target" "suspend.target" ];
+    };
+    serviceConfig = {
+      User = "deco";
+      Type = "simple";
+      Environment = "DISPLAY=:0";
+      ExecStart = "${pkgs.betterlockscreen}/bin/betterlockscreen -- lock";
+      TimeoutSec = "infinity";
+      ExecStartPost = "${pkgs.coreutils}/bin/sleep 1";
+    };
+    wantedBy = [ "sleep.target" "suspend.target" ];
+  };
+
   # Define a user account + default shell. Don't forget to set a password with ‘passwd’.
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.fish;
   users.users.deco = {
     isNormalUser = true;
     description = "deco";
@@ -115,7 +138,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    firefox
+    google-chrome
     picom
     pciutils
     thefuck
@@ -124,20 +147,24 @@
     betterlockscreen
     copyq
   ];
-  # Zsh settings (default shell was set above for all users)
-  programs.zsh = {
+
+  # Enable Fish shell and add plugins with repo cloned in imports
+  programs.fish = {
     enable = true;
-    syntaxHighlighting.enable = true; # installs zsh-syntax-highlighting plugin under the hood
-    autosuggestions.enable = true; # installs zsh-autosuggestions plugin under the hood
-    shellAliases = {
-      ll = "ls -l";
-    };
-    ohMyZsh = {
-      enable = true;
-      theme = "af-magic";
-      plugins = [ "git" "thefuck" "fzf" "ripgrep" "z" ];
-    };
+    plugins = [
+      "jethrokuan/fzf"
+      "jethrokuan/z"
+      "jhillyerd/plugin-git"
+    ];
   };
+
+  # Some known fonts + nice fonts from nerdfonts
+  fonts.fonts = with pkgs; [
+    noto-fonts
+    fira-code
+    overpass
+    (nerdfonts.override { fonts = [ "InconsolataGo" "SpaceMono" ]; })
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
