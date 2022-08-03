@@ -76,6 +76,9 @@
     enableContribAndExtras = true;
   };
 
+  # UPower is used by taffybar
+  services.upower.enable = true;
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -146,7 +149,14 @@
     ripgrep
     betterlockscreen
     copyq
+    taffybar
   ];
+  
+  # Workaround https://github.com/taffybar/taffybar/issues/403
+  # 1. Causes GDK_PIXBUF_MODULE_FILE to be set in xsession.
+  services.xserver.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+  # 2. Generates caches for install icons
+  gtk.iconCache.enable = true;
 
   # Enable Fish shell and add plugins with repo cloned in imports
   programs.fish = {
@@ -163,7 +173,7 @@
     noto-fonts
     fira-code
     overpass
-    (nerdfonts.override { fonts = [ "InconsolataGo" "SpaceMono" ]; })
+    nerdfonts
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
