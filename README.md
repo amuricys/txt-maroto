@@ -6,6 +6,10 @@ missing stuff:
 * migrating everything if possible to nix expressions
 * Taffybar is a bit buggy. Sometimes it doesn't work on multiple monitors
 * Alacritty/xmonad/vscode sometimes get stuck in ABYSMAL input delay. Sometimes the solution is to close the window, other times only logging out of xmonad altogether works...
+* Find a browser that actually works. Arc, Brave, Surf?
+* Fix mouse touch scrolling. in Gnome it works better somehow, less flat
+* Urbit configs
+* SLEEP WHEN LOCKING SCREEN
 
 
 some sources
