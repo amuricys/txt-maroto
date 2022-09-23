@@ -1,0 +1,57 @@
+2022-09-07 12:36:39.713750 <Notice>: Last log repeated 1 times
+2022-09-07 12:36:39.713734 (gui/501/application.io.alacritty.593774.593777) <Notice>: internal event: WILL_SPAWN, code = 0
+2022-09-07 12:36:39.713744 (gui/501/application.io.alacritty.593774.593777) <Notice>: service state: spawn scheduled
+2022-09-07 12:36:39.713745 (gui/501/application.io.alacritty.593774.593777) <Notice>: service state: spawning
+2022-09-07 12:36:39.713756 <Notice>: Coalition Cache Hit: app<application.io.alacritty.593774.593777(501)> [717]
+2022-09-07 12:36:39.713813 (gui/501/application.io.alacritty.593774.593777) <Notice>: launching: non-ipc demand
+2022-09-07 12:36:39.714122 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: xpcproxy spawned with pid 3100
+2022-09-07 12:36:39.714135 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: internal event: SPAWNED, code = 0
+2022-09-07 12:36:39.714139 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: service state: xpcproxy
+2022-09-07 12:36:39.714160 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: internal event: SOURCE_ATTACH, code = 0
+2022-09-07 12:36:39.718103 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: service state: running
+2022-09-07 12:36:39.718113 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: internal event: INIT, code = 0
+2022-09-07 12:36:39.718115 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: job state = running
+2022-09-07 12:36:39.718142 (gui/501/application.io.alacritty.593774.593777 [3100]) <Notice>: Successfully spawned alacritty[3100] because non-ipc demand
+2022-09-07 12:36:39.941473 (pid/3100 [alacritty]) <Notice>: uncorking exec source upfront
+2022-09-07 12:36:39.941508 (pid/3100 [alacritty]) <Notice>: created
+2022-09-07 12:36:39.941689 (pid/3100 [alacritty]) <Notice>: uncorking domain
+2022-09-07 12:36:39.942509 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.CMValidateMovieDataReferenceService
+2022-09-07 12:36:39.942521 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.ColorSyncXPCAgent
+2022-09-07 12:36:39.942524 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.CoreDisplay.XPCService
+2022-09-07 12:36:39.942528 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.ImageIOXPCService
+2022-09-07 12:36:39.942559 (pid/3100/com.apple.MTLCompilerService) <Notice>: created the implicit endpoint upfront
+2022-09-07 12:36:39.942564 (pid/3100/com.apple.MTLCompilerService) <Notice>: draining messages from com.apple.MTLCompilerService
+2022-09-07 12:36:39.942568 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.PerfPowerTelemetryClientRegistrationService
+2022-09-07 12:36:39.942573 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.ColorPickerImageLoader
+2022-09-07 12:36:39.942577 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.LegacyExternalColorPickerService.arm64
+2022-09-07 12:36:39.942579 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.LegacyExternalColorPickerService.x86_64
+2022-09-07 12:36:39.942582 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.VersionsUIHelper
+2022-09-07 12:36:39.942584 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.WindowSharingControlViewService
+2022-09-07 12:36:39.942586 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.documentPopoverViewService
+2022-09-07 12:36:39.942588 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.openAndSavePanelService
+2022-09-07 12:36:39.942590 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.appkit.xpc.sandboxedServiceRunner
+2022-09-07 12:36:39.942615 (pid/3100/com.apple.audio.AUHostingService.arm64e) <Notice>: created the implicit endpoint upfront
+2022-09-07 12:36:39.942619 (pid/3100/com.apple.audio.AUHostingService.arm64e) <Notice>: draining messages from com.apple.audio.AUHostingService.arm64e
+2022-09-07 12:36:39.942637 (pid/3100/com.apple.audio.AUHostingService.x86-64) <Notice>: created the implicit endpoint upfront
+2022-09-07 12:36:39.942640 (pid/3100/com.apple.audio.AUHostingService.x86-64) <Notice>: draining messages from com.apple.audio.AUHostingService.x86-64
+2022-09-07 12:36:39.942642 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.audio.CarbonComponentScanner.x86-64
+2022-09-07 12:36:39.942645 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.audio.ComponentTagHelper
+2022-09-07 12:36:39.942661 (pid/3100/com.apple.audio.Core-Audio-Driver-Service) <Notice>: created the implicit endpoint upfront
+2022-09-07 12:36:39.942664 (pid/3100/com.apple.audio.Core-Audio-Driver-Service) <Notice>: draining messages from com.apple.audio.Core-Audio-Driver-Service
+2022-09-07 12:36:39.942684 (pid/3100/com.apple.audio.Core-Audio-Driver-Service.helper) <Notice>: created the implicit endpoint upfront
+2022-09-07 12:36:39.942687 (pid/3100/com.apple.audio.Core-Audio-Driver-Service.helper) <Notice>: draining messages from com.apple.audio.Core-Audio-Driver-Service.helper
+2022-09-07 12:36:39.942690 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.audio.DriverHelper
+2022-09-07 12:36:39.942692 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.audio.InfoHelper
+2022-09-07 12:36:39.942694 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.audio.SandboxHelper
+2022-09-07 12:36:39.942699 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.automator.xpc.workflowServiceRunner
+2022-09-07 12:36:39.942706 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.coremedia.videodecoder
+2022-09-07 12:36:39.942708 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.coremedia.videodecoder.zonto
+2022-09-07 12:36:39.942711 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.coremedia.videoencoder
+2022-09-07 12:36:39.942713 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.coremedia.videoencoder.zonto
+2022-09-07 12:36:39.942716 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.foundation.UserScriptService
+2022-09-07 12:36:39.942720 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.internal.DataDetectorsRemoteScanner
+2022-09-07 12:36:39.942731 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.security.pboxd
+2022-09-07 12:36:39.942734 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.speech.SpeechSynthesisServerXPC
+2022-09-07 12:36:39.942737 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.textkit.nsattributedstringagent
+2022-09-07 12:36:39.942983 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.FileProvider.ArchiveService
+2022-09-07 12:36:39.943051 (pid/3100 [alacritty]) <Notice>: Service stub created for com.apple.LoginUserService
